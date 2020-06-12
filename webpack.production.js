@@ -11,12 +11,7 @@ const { resolve } = require('path');
 
 const srcFolder = resolve(__dirname, 'src');
 
-const currentVersion = process.env.VERSION || 'development'; 
-
-module.exports = (arg) => {
-
-    console.log('Build produciton webpac', arg);
-
+module.exports = (currentVersion) => {
     return {
         cache: true,
         mode: 'production',

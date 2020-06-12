@@ -12,7 +12,6 @@ const GitRevisionPlugin = require('git-revision-webpack-plugin');
 const webpackDevelopmentConfig = require('./webpack.development.js')
 const webpackProductionConfig = require('./webpack.production.js')
 
-
 /**
  * Assume verion as git describe
  * @see https://medium.com/bind-solution/dynamic-version-update-with-git-describe-477e8cd2a306
@@ -50,7 +49,6 @@ module.exports = function (env, args) {
             }),
             new webpack.EnvironmentPlugin({
                 NODE_ENV: 'development',
-                VERSION: currentVersion,
             }),
             new webpack.DefinePlugin({
                 __VERSION__: JSON.stringify(appVersion),
@@ -178,7 +176,7 @@ module.exports = function (env, args) {
     };
 
     const modeConfig = {
-        production: webpackProductionConfig,
+        production: webpackProductionConfig(appVersion),
         development: webpackDevelopmentConfig
     }
 

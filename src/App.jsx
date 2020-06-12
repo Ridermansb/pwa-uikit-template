@@ -14,8 +14,18 @@ const App = () => {
             data-uk-height-viewport="expand: true"
         >
             <div className="uk-container">
-                <h3 className="uk-heading-bullet uk-margin-small-top">PWA Stated Kit</h3>
+                <h3 className="uk-heading-bullet uk-text-muted uk-margin-top">PWA Stated Kit</h3>
+                <div className="uk-card uk-card-default uk-card-body uk-margin-small-top uk-border-rounded">
+                    <p>Hello from <q>PWA Started kit with uikit and mobx</q></p>
+                </div>
             </div>
+            {__VERSION__ && (
+                <div className="uk-position-fixed uk-position-bottom-center">
+                    <p className="uk-text-meta">
+                        v{__VERSION__}
+                    </p>
+                </div>
+            )}
         </div>
     );
 };
