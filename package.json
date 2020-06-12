@@ -1,6 +1,5 @@
 {
   "name": "pwa-started-kit",
-  "version": "0.0.1",
   "description": "PWA Started kit with uikit",
   "main": "index.js",
   "scripts": {
