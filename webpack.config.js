@@ -101,15 +101,15 @@ module.exports = function (env, args) {
                         ios: 'startup',
                     },
                     {
-                        src: resolve('src/assets/icons/favicon.png'),
+                        src: resolve('src/assets/icons/maskable_icon.png'),
                         sizes: [36, 48, 72, 96, 144, 192, 512],
                         destination: join('icons', 'android'),
                     },
                     {
                         src: resolve('src/assets/icons/maskable_icon.png'),
-                        "sizes": "196x196",
-                        "type": "image/png",
-                        "purpose": "maskable"
+                        sizes: "196x196",
+                        type: "image/png",
+                        purpose: "maskable"
                     }
                 ],
             }),
