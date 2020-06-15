@@ -73,10 +73,6 @@ module.exports = function (env, args) {
                     developerName: 'ridermansb',
                     background: '#fff',
                     theme_color: '#333',
-                    icons: {
-                        coast: false,
-                        yandex: false
-                    }
                 }
             }),
             new WebpackPwaManifest({
@@ -109,6 +105,12 @@ module.exports = function (env, args) {
                         sizes: [36, 48, 72, 96, 144, 192, 512],
                         destination: join('icons', 'android'),
                     },
+                    {
+                        src: resolve('src/assets/icons/maskable_icon.png'),
+                        "sizes": "196x196",
+                        "type": "image/png",
+                        "purpose": "maskable"
+                    }
                 ],
             }),
             new webpack.HashedModuleIdsPlugin(),
